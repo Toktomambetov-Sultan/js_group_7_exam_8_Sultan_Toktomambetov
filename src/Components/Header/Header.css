@@ -1,0 +1,35 @@
+.Header {
+    padding: 20px 0 30px;
+    background-color: #000;
+    color: #fff;
+}
+
+.Header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header .logo {
+    font-size: 30px;
+}
+.Header .link{
+    margin: 0px;
+    font-size: 26px;
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    border-right: 2px solid #fff;
+    padding: 0 10px;
+}
+.Header .link:last-child{
+    border: none;
+}
+.Header .link:hover{
+    text-decoration: underline;
+}
+.Header .link:active,
+.Header .link.active
+{
+    color: #36ff0e;
+}
