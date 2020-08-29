@@ -8,7 +8,7 @@ export default function Header() {
       <div className="container inner">
         <div className="logo">Quotes Central</div>
         <div className="links">
-          <NavLink to="/category/all" className="link">
+          <NavLink to="/category/" className="link">
             Qoutes
           </NavLink>
           <NavLink to="/addQuote" exact className="link">

@@ -19,6 +19,14 @@ function App() {
               return null;
             }}
           />
+          <Route
+            path="/category"
+            exact
+            render={props => {
+              props.history.push("/category/all");
+              return null;
+            }}
+          />
           <Route path="/addQuote" exact component={AddQuote} />
           <Route path="/category/:category" exact component={QuotesCenter} />
           <Route path="/qoute/:id" exact />
