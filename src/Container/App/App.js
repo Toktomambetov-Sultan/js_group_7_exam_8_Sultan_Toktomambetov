@@ -4,10 +4,11 @@ import Header from "../../Components/Header/Header";
 import AddQuote from "../AddQuote/AddQuote";
 import QuotesCenter from "../QuotesCenter/QuotesCenter";
 import "./App.css";
+import EditPage from "../EditPage/EditPage";
 function Redirect(props) {
   useEffect(() => {
     props.history.push("/category/all");
-  }, []);
+  }, [props]);
   return null;
 }
 
@@ -21,7 +22,7 @@ function App() {
           <Route path="/category/" exact component={Redirect} />
           <Route path="/addQuote" exact component={AddQuote} />
           <Route path="/category/:category" exact component={QuotesCenter} />
-          <Route path="/qoute/:id" exact />
+          <Route path="/qoute/:path" exact component={EditPage} />
         </Switch>
       </BrowserRouter>
     </div>
