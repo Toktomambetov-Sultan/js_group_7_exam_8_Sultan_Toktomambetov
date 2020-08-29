@@ -2,9 +2,9 @@ import React, { useEffect, useState, useCallback } from "react";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import server from "../../server";
 import "./QuotesCenter.css";
-import { categories } from "../../Constants/Constants";
 import '../../fontawasome/css/all.min.css';
 import Grayback from "../../Components/grayback/Grayback";
+import QouteItem from "../../Components/QouteItem/QouteItem";
 
 export default function QuotesCenter(props) {
     const [quotes, setQuotes] = useState({});
@@ -22,7 +22,6 @@ export default function QuotesCenter(props) {
         , [props]);
     useEffect(() => {
         initQuotesCallBack().catch(console.error);
-        console.log("update");
     }, [props, initQuotesCallBack]);
     const deleteQuote = async (path) => {
         setLoading(true);
@@ -43,21 +42,7 @@ export default function QuotesCenter(props) {
                 <div className="quotes-list">
                     {Object.keys(quotes).length ? (<>
                         {Object.keys(quotes).map(key => (
-                            <div className="quote" key={key}>
-                                <p className="quote__text">{quotes[key].text}</p>
-                                <div className="qoute__btns" >
-                                    <button onClick={() => editQuote(key)}>
-                                        <i className="fas fa-edit"></i>
-                                    </button>
-                                    <button onClick={() => deleteQuote(key)}>
-                                        <i className="fas fa-trash"></i>
-                                    </button>
-                                </div>
-                                <span className="quote__category">Category: {
-                                    categories.find(item => item.id === quotes[key].category).name
-                                }</span>
-                                <span className="quote__author">-{quotes[key].author}</span>
-                            </div>
+                            <QouteItem key={key} path={key} editQuote={editQuote} quotes={quotes} deleteQuote={deleteQuote} />
                         ))}</>
                     ) : (<h3 className="if-no-quotes">No quotes. Add new qoute.</h3>)}
                 </div>
