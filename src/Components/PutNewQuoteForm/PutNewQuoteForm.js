@@ -4,7 +4,7 @@ import "./PutNewQuoteForm.css";
 export default function PutNewQuoteForm({ data, setData, onSubmit }) {
   return (
     <div className="PutNewQuoteForm">
-      <form onSubmit={onSubmit}>
+      <form onSubmit={e => onSubmit(e).catch(console.error)}>
         <div className="form-group">
           <label>
             <span className="form-name">Author:</span>
