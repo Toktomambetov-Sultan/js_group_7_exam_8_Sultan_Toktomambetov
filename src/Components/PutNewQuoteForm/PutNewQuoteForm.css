@@ -1,0 +1,73 @@
+.PutNewQuoteForm {
+    text-align: center;
+}
+.PutNewQuoteForm .custom-select {
+    padding: 10px;
+    font-size: 26px;
+    outline: none;
+    background: rgb(114, 116, 255);
+    color: rgb(0, 255, 170);
+    border: 3px solid rgb(0, 255, 170);
+}
+
+.PutNewQuoteForm .custom-select option {
+    font-size: 20px;
+    background: rgb(114, 116, 255);
+    color: rgb(0, 255, 170);
+}
+
+.form-group {
+    padding: 10px 0;
+}
+
+.PutNewQuoteForm .form-name {
+    font-size: 28px;
+    margin: 0 0 10px;
+    display: block;
+
+}
+
+.PutNewQuoteForm .author-input {
+    padding: 5px;
+    font-size: 20px;
+    outline: none;
+    border-width: 2px;
+}
+
+.PutNewQuoteForm .author-input:focus {
+    border: 2px solid rgb(0, 140, 255);
+}
+
+.PutNewQuoteForm .textarea {
+    margin: 20px auto;
+    max-width: 600px;
+    width: 600px;
+    height: 100px;
+    font-size: 20px;
+    display: block;
+    resize: none;
+    padding: 5px;
+}
+.PutNewQuoteForm button.submit {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: 20px 50px ;
+    border-radius: 3px;
+    background: rgb(64, 199, 129);
+    box-shadow: 0 -3px rgb(53, 167, 110) inset;
+    transition: 0.2s;
+    display: block;
+    margin: 40px auto;
+    font-size: 30px;
+    text-transform: uppercase ;
+}
+
+.PutNewQuoteForm button.submit:hover {
+    background: rgb(53, 167, 110);
+}
+
+.PutNewQuoteForm button.submit:active {
+    background: rgb(33, 147, 90);
+    box-shadow: 0 3px rgb(33, 147, 90) inset;
+}
