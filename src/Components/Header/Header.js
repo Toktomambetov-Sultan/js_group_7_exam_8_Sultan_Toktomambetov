@@ -11,7 +11,7 @@ export default function Header() {
           <NavLink to="/category/" className="link">
             Qoutes
           </NavLink>
-          <NavLink to="/addQuote" exact className="link">
+          <NavLink to="/addQuote/" exact className="link">
             Submit new quote
           </NavLink>
         </div>

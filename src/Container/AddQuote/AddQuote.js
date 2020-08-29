@@ -6,7 +6,7 @@ import server from "../../server";
 
 export default function AddQuote(props) {
   const [data, setData] = useState({
-    category: categories.id,
+    category: categories[0].id,
     author: "",
     text: "",
   });
@@ -17,7 +17,7 @@ export default function AddQuote(props) {
     setLoading(true);
     await server.addNewQuote(data);
     setLoading(false);
-    props.history.push({ pathname: "/" });
+    props.history.push({ pathname: "/category/all" });
   };
   return (
     <div className="AddQuote">
